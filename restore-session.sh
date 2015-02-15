@@ -35,7 +35,6 @@ logger -t "$ME" "Gnome session restored started."
 [ ! -d $GNOMEDIR ]&& logger -t "$0" "ABORTED execution because $GNOMEDIR does not exist. Do you have saved a Gnome session?" && exit
 
 RESAVE=$(dconf read /org/gnome/gnome-session/auto-save-session)
-DEXTHERE=$()
 
 # when the one-shot is true or when the DEX dir does not exists enforce the session copy
 if [ ! -d $EXECDIR ]||[ ! "$(ls -A $EXECDIR)" ]||[ x$RESAVE == "xtrue" ];then
